@@ -4,3 +4,7 @@ A Firefox add-on that replaces tabs with a minimal placeholder.
 
 Inspired by The Great Suspender for Chrome.
 
+TODO: 
+
+- [ ] Add a tab/+page context menu option to suspend a tab
+
