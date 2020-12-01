@@ -16,5 +16,11 @@
 		"default_icon": "icon-32.png",
 		"default_title": "Tab Suspend Placeholder",
 		"default_popup": "popup/popup.html"
+	},
+
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{c108a2d5-fa80-40ca-acc3-aa749f467b40}"
+		}
 	}
 }
