@@ -1,4 +1,3 @@
-
 // If string exceeds maxlen, shorten it and add "..."
 function limitLen(text, maxlen) {
 	if(text.length <= maxlen) return text;
@@ -15,32 +14,25 @@ let unsuspendBtn = document.getElementById("unsuspend-btn");
 let maxTitleLen = Infinity;
 let maxUrlLen = Infinity;
 
-// Get page URL
-let data = window.location.href;
+// Argument parsing
+let parameters = new URLSearchParams(window.location.search);
+let p_title  = decodeURI(parameters.get("title") || "");
+let p_imgURL = decodeURI(parameters.get("img")   || "");
+let p_url    = decodeURI(parameters.get("url")   || "");
 
-// Extract title from URL
-pageTitle.innerText = limitLen(
-	decodeURI(
-		data.match(/[&?]title=([^&]*)&url=/)[1]
-	), maxTitleLen
-);
-
+// Set title on page
+pageTitle.innerText = limitLen(p_title, maxTitleLen);
 // Set the tab title
-document.title= pageTitle.innerText;
+document.title = p_title;
 
-// Extract unsuspended URL form URL
-pageURL.innerText = limitLen(
-	decodeURI(
-		data.match(/[&?]url=([^&]*)/)[1]
-	), maxUrlLen
-);
+// Set original url
+pageURL.innerText = limitLen(p_url, maxUrlLen);
 
 // Add image if one is specified
-let imgURL = data.match(/[&?]img=([^&]*)/);
-if(imgURL != null) {
+if(p_imgURL != "") {
 	let img = document.createElement("img");
 	pageImg.appendChild(img);
-	img.src = decodeURI(imgURL[1]);
+	img.src = p_imgURL;
 }
 
 // Add a listener to the button
