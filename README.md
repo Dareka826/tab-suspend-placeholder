@@ -1,8 +1,8 @@
 # Tab Suspend Placeholder
 
-A Firefox add-on that replaces tabs with a minimal placeholder.
+A Firefox add-on that replaces tabs with a placeholder that is pretty minimal and doesn't have js constantly running in the background.
 
-Inspired by The Great Suspender for Chrome.
+Inspired by The Great Suspender.
 
 TODO: 
 
