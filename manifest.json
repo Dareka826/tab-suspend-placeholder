@@ -5,7 +5,8 @@
 	"description": "Adds an option to replace a tab with a light placeholder tab",
 
 	"icons": {
-		"32": "icon-32.png"
+		"32": "icon-32.png",
+		"64": "icon-64.png"
 	},
 
 	"permissions": [
