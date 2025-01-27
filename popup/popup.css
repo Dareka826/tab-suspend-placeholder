@@ -1,24 +1,24 @@
 body {
-	background-color: #222;
-	color: #fff;
-	margin: 0px;
-	padding: 0px;
+    background-color: #222;
+    color: #fff;
+    margin: 0px;
+    padding: 0px;
 }
 
 .button {
-	display: flex;
-	justify-content: center;
-	background-color: #333;
-	padding: 10px;
-	cursor: pointer;
-	-moz-user-select: none;
-	     user-select: none;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+    cursor: pointer;
+    -moz-user-select: none;
+         user-select: none;
 }
 
 .button:hover {
-	background-color: #444;
+    background-color: #444;
 }
 
 .button:active {
-	background-color: #111;
+    background-color: #111;
 }

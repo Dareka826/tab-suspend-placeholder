@@ -1,7 +1,7 @@
 // If string exceeds maxlen, shorten it and add "..."
 function limitLen(text, maxlen) {
-	if(text.length <= maxlen) return text;
-	return text.substr(0, maxlen-3) + "...";
+    if(text.length <= maxlen) return text;
+    return text.substr(0, maxlen-3) + "...";
 }
 
 // Get DOM elements
@@ -30,21 +30,20 @@ pageURL.innerText = limitLen(p_url, maxUrlLen);
 
 // Add image if one is specified
 if(p_imgURL != "") {
-	let img = document.createElement("img");
-	pageImg.appendChild(img);
-	img.src = p_imgURL;
+    let img = document.createElement("img");
+    pageImg.appendChild(img);
+    img.src = p_imgURL;
 }
 
 // Add a listener to the button
 unsuspendBtn.addEventListener("click", () => {
-	try {
-		// Navigate to the unsuspended URL
-		window.location.href = pageURL.innerText;
-	} catch(e) {
-		// If an error occurs (probably TypeError for sites like
-		// about:devtools), alert it and log
-		console.log(e);
-		alert(e);
-	}
+    try {
+        // Navigate to the unsuspended URL
+        window.location.href = pageURL.innerText;
+    } catch(e) {
+        // If an error occurs (probably TypeError for sites like
+        // about:devtools), alert it and log
+        console.log(e);
+        alert(e);
+    }
 });
-
