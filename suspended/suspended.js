@@ -37,6 +37,14 @@ if(p_imgURL != "") {
     img.src = p_imgURL;
 }
 
+// Add favicon
+(function () {
+    let icon_link = document.createElement("link");
+    icon_link.rel = "icon";
+    icon_link.href = browser.extension.getURL("/favicon.ico");
+    document.head.appendChild(icon_link);
+})();
+
 // Add a listener to the button
 unsuspendBtn.addEventListener("click", () => {
     try {
