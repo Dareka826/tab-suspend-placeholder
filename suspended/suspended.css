@@ -18,12 +18,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-grow: 1;
+    padding: 3em;
 }
 
 #page-title {
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 #page-url {
@@ -39,7 +39,6 @@ body {
     align-items: center;
     flex-grow: 1;
     min-height: 0px;
-    max-height: 60%;
 }
 
 #page-img > img {
@@ -51,7 +50,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
+    padding: 3em;
 }
 
 .button {
