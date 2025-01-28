@@ -1,14 +1,16 @@
+let $ = function (id) { return document.getElementById(id); };
+
+// Get DOM elements
+let pageTitle    = $("page-title");
+let pageURL      = $("page-url");
+let pageImg      = $("page-img");
+let unsuspendBtn = $("unsuspend-btn");
+
 // If string exceeds maxlen, shorten it and add "..."
 function limitLen(text, maxlen) {
     if(text.length <= maxlen) return text;
     return text.substr(0, maxlen-3) + "...";
 }
-
-// Get DOM elements
-let pageTitle = document.getElementById("page-title");
-let pageURL = document.getElementById("page-url");
-let pageImg = document.getElementById("page-img");
-let unsuspendBtn = document.getElementById("unsuspend-btn");
 
 // Max length definitions
 let maxTitleLen = Infinity;
